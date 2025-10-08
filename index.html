@@ -3,14 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My Profile</title>
-  <!-- Link to external CSS file -->
+  <title>My Profile - HZ HBO-ICT</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      background-color: #fffcfe;
+      color: #333;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #03070b;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px auto;
+      max-width: 700px;
+      text-align: justify;
+    }
+
+    ul {
+      list-style-position: inside;
+      text-align: left;
+      display: inline-block;
+      margin: 20px auto;
+      padding: 0;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 60%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #e1a4ca;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    .topnav a {
+      float: left;
+      color: #1e1c1c;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      font-weight: bold;
+    }
+
+    .links a {
+      display: block;
+      margin: 10px auto;
+      color: #1e1c1c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      color: #e91e63;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #e1a4ca;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    #menu-toggle:checked + .sidebar {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 15px 0;
+      color: #1e1c1c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      color: #e91e63;
+    }
+
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #e1a4ca;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 1100;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation bar -->
+  <!-- Top navigation bar -->
   <div class="topnav">
     <a class="active" href="index.html">Home</a>
     <a href="profile.html">Profile</a>
@@ -19,44 +146,66 @@
     <a href="blog.html">Blog</a>
   </div>
 
-  <h1>Welcome</h1>
-  <p><strong>Let's see what ICT stands for</strong></p>
-  <p>ICT (Information and Communication Technology)</p>
-  <p>
-    ICT plays a vital role in nearly every industry today, helping businesses operate efficiently, 
-    improving communication, and enabling innovation. As technology continues to evolve, ICT remains 
-    a key driver of digital transformation and economic growth worldwide.
-  </p>
+  <!-- Sidebar toggle -->
+  <input type="checkbox" id="menu-toggle">
 
-  <img src="images/ict.webp" alt="ICT Image">
-  <img src="images/ict2.jpg" alt="ICT Image 2">
-
-  <div class="links">
-    <a href="https://hz.nl/en" target="_blank">Click here to find out more about HZ</a>
-    <a href="https://hz.nl/en/study-programmes/it" target="_blank">Click here to find out more about the HBO-ICT program</a>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="https://hz.nl/en/about-hz/regulations-documents/course-and-examination-regulations" target="_blank">
+      The HZ HBO-ICT Course and Examination Regulations (CER)
+    </a>
+    <a href="https://hz.nl/en/about-hz/regulations-documents/implementation-regulations" target="_blank">
+      The Implementation Regulations (IR) of the HBO-ICT program
+    </a>
+    <a href="https://learn.hz.nl" target="_blank">This Learn environment</a>
+    <a href="https://my.hz.nl" target="_blank">MyHZ study progress</a>
+    <a href="https://github.com/HZ-HBO-ICT" target="_blank">GitHub environment of the study program</a>
   </div>
 
-  <p><strong>Now let me tell you why I believe this program suits me</strong></p>
-  <p>
-    The HBO-ICT programme appeals to me specifically because it combines practical, hands-on 
-    experience with theoretical knowledge. This balance is important to me because I don’t just want to 
-    learn concepts—I want to apply them in real-world situations. I’m also excited by the opportunity to work 
-    on projects, collaborate in teams, and gain insight into different specializations.
-  </p>
-  <p>
-    In short, I see the HBO-ICT programme as a gateway into a dynamic and future-proof career where I can 
-    grow both professionally and personally, while making a real impact in the digital world.
-  </p>
+  <!-- Menu button -->
+  <label for="menu-toggle" class="menu-btn">☰ Menu</label>
 
-  <img src="images/hbo.jpg" alt="HBO ICT Image">
+  <!-- Page content -->
+  <div class="content">
+    <h1>Welcome</h1>
+    <p><strong>Let's see what ICT stands for</strong></p>
+    <p>ICT (Information and Communication Technology)</p>
+    <p>
+      ICT plays a vital role in nearly every industry today, helping businesses operate efficiently, 
+      improving communication, and enabling innovation. As technology continues to evolve, ICT remains 
+      a key driver of digital transformation and economic growth worldwide.
+    </p>
 
-  <p><strong>Here is a list of reasons why I choose this program:</strong></p>
-  <ul>
-    <li>Strong emphasis on practical skills</li>
-    <li>Opportunities</li>
-    <li>International environment</li>
-    <li>Preparation for a wide range of careers in ICT.</li>
-  </ul>
+    <img src="images/ict.webp" alt="ICT Image">
+    <img src="images/ict2.jpg" alt="ICT Image 2">
+
+    <div class="links">
+      <a href="https://hz.nl/en" target="_blank">Click here to find out more about HZ</a>
+      <a href="https://hz.nl/en/study-programmes/it" target="_blank">Click here to find out more about the HBO-ICT program</a>
+    </div>
+
+    <p><strong>Now let me tell you why I believe this program suits me</strong></p>
+    <p>
+      The HBO-ICT programme appeals to me specifically because it combines practical, hands-on 
+      experience with theoretical knowledge. This balance is important to me because I don’t just want to 
+      learn concepts—I want to apply them in real-world situations. I’m also excited by the opportunity to work 
+      on projects, collaborate in teams, and gain insight into different specializations.
+    </p>
+    <p>
+      In short, I see the HBO-ICT programme as a gateway into a dynamic and future-proof career where I can 
+      grow both professionally and personally, while making a real impact in the digital world.
+    </p>
+
+    <img src="images/hbo.jpg" alt="HBO ICT Image">
+
+    <p><strong>Here is a list of reasons why I choose this program:</strong></p>
+    <ul>
+      <li>Strong emphasis on practical skills</li>
+      <li>Opportunities</li>
+      <li>International environment</li>
+      <li>Preparation for a wide range of careers in ICT.</li>
+    </ul>
+  </div>
 
 </body>
 </html>
